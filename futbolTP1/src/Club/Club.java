@@ -8,7 +8,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import Athlete.AthleteDeserealizer;
+import Athlete.AthleteDeserializer;
 import Athlete.AmateurAthlete;
 import Athlete.ProAthlete;
 import Athlete.StarAthlete;
@@ -165,39 +165,13 @@ public class Club implements JsonHandler {
         }
     }
 
-    @Override
-    public void jsonToList(List<Object> clubsToList){
-        AthleteDeserealizer deserealizer = new AthleteDeserealizer("athlete");
-        deserealizer.registerBarnType("AmateurAthlete", AmateurAthlete.class);
-        deserealizer.registerBarnType("Athlete", Athlete.class);
-        deserealizer.registerBarnType("ProAthlete", ProAthlete.class);
-        deserealizer.registerBarnType("StarAthlete", StarAthlete.class);
-        Gson gson = new GsonBuilder().registerTypeAdapter(Athlete.class, deserealizer).create();
-        BufferedReader reader = null;
-        List<Club> clubList;
-        try{
-            reader = new BufferedReader(new FileReader(new File("Clubs.json")));
-            clubList = gson.fromJson(reader, (new TypeToken<List<Club>>(){}.getType()));
-            clubsToList.addAll(clubList);
-        }catch (IOException e){
-            e.printStackTrace();
-        }finally {
-            try{
-                if(reader != null){
-                    reader.close();
-                }
-            }catch (IOException e){
-                e.printStackTrace();
-            }
-        }
-    }
 
     @Override
-    public void persistData(List<Object> clubsToJson) {
+    public void save(List<Object> clubsToJson, String fileName) {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         BufferedWriter writer = null;
         try{
-            writer = new BufferedWriter(new FileWriter(new File("Clubs.json")));
+            writer = new BufferedWriter(new FileWriter(new File(fileName)));
             String json = gson.toJson(clubsToJson, clubsToJson.getClass());
             writer.write(json);
         }catch (IOException e){
@@ -214,7 +188,32 @@ public class Club implements JsonHandler {
 
     }
 
-
+    @Override
+    public void jsonToList(List<Object> clubsToList, String fileName){
+        AthleteDeserializer deserializer = new AthleteDeserializer("athlete");
+        deserializer.registerBarnType("AmateurAthlete", AmateurAthlete.class);
+        deserializer.registerBarnType("Athlete", Athlete.class);
+        deserializer.registerBarnType("ProAthlete", ProAthlete.class);
+        deserializer.registerBarnType("StarAthlete", StarAthlete.class);
+        Gson gson = new GsonBuilder().registerTypeAdapter(Athlete.class, deserializer).create();
+        BufferedReader reader = null;
+        List<Club> clubList;
+        try{
+            reader = new BufferedReader(new FileReader(new File("ClubsOriginal.json")));
+            clubList = gson.fromJson(reader, (new TypeToken<List<Club>>(){}.getType()));
+            clubsToList.addAll(clubList);
+        }catch (IOException e){
+            e.printStackTrace();
+        }finally {
+            try{
+                if(reader != null){
+                    reader.close();
+                }
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        }
+    }
 
         //endregion
 

@@ -1,8 +1,15 @@
 package Athlete;
 
 import Dice.Dice;
+import Game.JsonHandler;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
 
-public final class ProAthlete extends Athlete {
+import java.io.*;
+import java.util.List;
+
+public final class ProAthlete extends Athlete implements JsonHandler {
     private final String athlete = "Professional";
 
 
@@ -41,5 +48,56 @@ public final class ProAthlete extends Athlete {
     }
     //endregion
 
+
+    //regionMethods
+
+    @Override
+    public void save(List<Object> proAthletes, String fileName) {
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        BufferedWriter writer = null;
+        try{
+            writer = new BufferedWriter(new FileWriter(new File(fileName)));
+            String json = gson.toJson(proAthletes, proAthletes.getClass());
+            writer.write(json);
+        }catch (IOException e){
+            e.printStackTrace();
+        } finally {
+            if(writer != null){
+                try{
+                    writer.close();
+                }catch (IOException e){
+                    e.printStackTrace();
+                }
+            }
+        }
+
+    }
+
+    @Override
+    public void jsonToList(List<Object> proAthletes, String fileName){
+        AthleteDeserializer deserializer = new AthleteDeserializer("athlete");
+        deserializer.registerBarnType("Athlete", Athlete.class);
+        deserializer.registerBarnType("ProAthlete", ProAthlete.class);
+        Gson gson = new GsonBuilder().registerTypeAdapter(Athlete.class, deserializer).create();
+        BufferedReader reader = null;
+        List<ProAthlete> proList;
+        try{
+            reader = new BufferedReader(new FileReader(new File(fileName)));
+            proList = gson.fromJson(reader, (new TypeToken<List<ProAthlete>>(){}.getType()));
+            proAthletes.addAll(proList);
+        }catch (IOException e){
+            e.printStackTrace();
+        }finally {
+            try{
+                if(reader != null){
+                    reader.close();
+                }
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        }
+    }
+
+    //endregion
 }
 //agregar 2 futbolistas mas

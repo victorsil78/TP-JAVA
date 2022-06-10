@@ -1,8 +1,15 @@
 package Athlete;
 
 import Dice.Dice;
+import Game.JsonHandler;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
 
-public final class StarAthlete extends Athlete {
+import java.io.*;
+import java.util.List;
+
+public final class StarAthlete extends Athlete implements JsonHandler {
     private final String athlete = "Star";
     private int hattrickCount;
 
@@ -58,6 +65,57 @@ public final class StarAthlete extends Athlete {
             setHattrickCount(getHattrickCount() + 1);
         }
         return diceSide;
+    }
+
+    //endregion
+
+    //regionMethods
+
+    @Override
+    public void save(List<Object> starAthletes, String fileName) {
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        BufferedWriter writer = null;
+        try{
+            writer = new BufferedWriter(new FileWriter(new File(fileName)));
+            String json = gson.toJson(starAthletes, starAthletes.getClass());
+            writer.write(json);
+        }catch (IOException e){
+            e.printStackTrace();
+        } finally {
+            if(writer != null){
+                try{
+                    writer.close();
+                }catch (IOException e){
+                    e.printStackTrace();
+                }
+            }
+        }
+
+    }
+
+    @Override
+    public void jsonToList(List<Object> starAthletes, String fileName){
+        AthleteDeserializer deserializer = new AthleteDeserializer("athlete");
+        deserializer.registerBarnType("Athlete", Athlete.class);
+        deserializer.registerBarnType("StarAthlete", StarAthlete.class);
+        Gson gson = new GsonBuilder().registerTypeAdapter(Athlete.class, deserializer).create();
+        BufferedReader reader = null;
+        List<StarAthlete> starList;
+        try{
+            reader = new BufferedReader(new FileReader(new File(fileName)));
+            starList = gson.fromJson(reader, (new TypeToken<List<StarAthlete>>(){}.getType()));
+            starAthletes.addAll(starList);
+        }catch (IOException e){
+            e.printStackTrace();
+        }finally {
+            try{
+                if(reader != null){
+                    reader.close();
+                }
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        }
     }
 
     //endregion

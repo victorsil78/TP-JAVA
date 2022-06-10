@@ -156,7 +156,7 @@ public class Main {
 
             List<Object> lista = new ArrayList<>();
             List<Club> clubs = new ArrayList<>();
-            club.jsonToList(lista);
+            club.jsonToList(lista, "ClubsOriginal.json");
 
             for (var inst : lista){
                 clubs.add((Club)inst);
