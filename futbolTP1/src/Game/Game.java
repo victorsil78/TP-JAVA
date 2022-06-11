@@ -1,5 +1,9 @@
 package Game;
 
+
+public class Game {
+
+
 import Athlete.Athlete;
 import Athlete.StarAthlete;
 import Athlete.AmateurAthlete;
@@ -13,6 +17,7 @@ import java.io.*;
 import java.util.List;
 
 public class Game implements JsonHandler{
+
     public static void pause (int mellisec){
         try {
             Thread.sleep(mellisec);
