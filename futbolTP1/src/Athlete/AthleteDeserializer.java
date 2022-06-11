@@ -6,12 +6,12 @@ import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.Map;
 
-public class AthleteDeserealizer implements JsonDeserializer {
+public class AthleteDeserializer implements JsonDeserializer {
     private String athleteTypeElementName;
     private Gson gson;
     private Map<String, Class<? extends Athlete>> athleteTypeRegistry;
 
-    public AthleteDeserealizer(String athleteTypeElementName) {
+    public AthleteDeserializer(String athleteTypeElementName) {
         this.athleteTypeElementName = athleteTypeElementName;
         this.gson = new Gson();
         this.athleteTypeRegistry = new HashMap<>();

@@ -3,6 +3,6 @@ package Game;
 import java.util.List;
 
 public interface JsonHandler {
-    void persistData(List<Object> list);
-    void jsonToList(List<Object> list);
+    void save(List<Object> list, String fileName);
+    void jsonToList(List<Object> list, String fileName);
 }
