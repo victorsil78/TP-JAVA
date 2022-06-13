@@ -11,10 +11,11 @@ public class GamePlayer {
 
     //region Constructors
 
-    public GamePlayer(String name, Club club) {
-            this.name = name;
-            this.club = club;
-        }
+    public GamePlayer(String name, Club club, int wins) {
+        this.name = name;
+        this.club = club;
+        this.wins = wins;
+    }
 
     public GamePlayer(List<Club> clubList) {
                 this.name = "PC";
