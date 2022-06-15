@@ -332,6 +332,9 @@ public class Menu {
             }catch (InputMismatchException e) {
                 System.out.println(Messages.INVALID.getMsg());
                 scanner.nextLine();
+            }catch (IndexOutOfBoundsException e){
+                System.out.println(Messages.INVALID.getMsg());
+                scanner.nextLine();
             }
         }
         while (answer != 0);
@@ -469,6 +472,8 @@ public class Menu {
             try {
                 answer = scanner.nextInt();
                 switch (answer) {
+                    case 0:
+                        break;
                     case 1:
                         athleteMenu(club.getTeam().get(0));
                         break;
@@ -540,6 +545,8 @@ public class Menu {
             try {
                 answer = scanner.nextInt();
                 switch (answer) {
+                    case 0:
+                        break;
                     case 1:
                         System.out.println("Capacity: " + stadium.getCapacity() + " seats");
                         break;
