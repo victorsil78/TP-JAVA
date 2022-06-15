@@ -93,12 +93,14 @@ public class Menu {
     }
             //Muestra estadisticas finales del torneo
     public void tournamentFinalStatistics() {
-        System.out.println("POSITIONS RANKING");
+        System.out.println("-----------------------------------");
+        System.out.println("\nPOSITIONS RANKING");
         getTournament().getStatistics().showPositions(getTournament().getStatistics().getPositions());
-        System.out.println("SCORERS RANKING");
+        System.out.println("\nSCORERS RANKING");
         getTournament().getStatistics().showPositions(getTournament().getStatistics().getScorers());
-        System.out.println("HATTRICK RANKING");
+        System.out.println("\nHATTRICK RANKING");
         getTournament().getStatistics().showPositions(getTournament().getStatistics().getHattricks());
+        System.out.println("\n");
     }
             //Una vez terminado el torneo, pregunta si quiere empezar uno nuevo
     public void newTournamentMenu() {
