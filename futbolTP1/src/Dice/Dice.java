@@ -21,7 +21,7 @@ public class Dice {
         public List<Integer> getDice() {
             return dice;
         }
-
+                //Arroja una cara random del dado y muestra su valor
         public int RandomSide(){
             return dice.get((int)(Math.random()*5));
         }

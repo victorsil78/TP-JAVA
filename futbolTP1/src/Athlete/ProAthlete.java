@@ -15,6 +15,9 @@ public final class ProAthlete extends Athlete implements JsonHandler {
 
     //region Constructor
 
+    public ProAthlete() {
+    }
+
     public ProAthlete(String name, String lastName, int age) {
         super(name, lastName, age, 300, new Dice(0,1,2,0,1,2));
 
@@ -100,4 +103,3 @@ public final class ProAthlete extends Athlete implements JsonHandler {
 
     //endregion
 }
-//agregar 2 futbolistas mas

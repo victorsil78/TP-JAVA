@@ -178,5 +178,41 @@
         2
       ]
     }
+  },
+  {
+    "athlete": "Professional",
+    "name": "Paulo",
+    "lastName": "Dybala",
+    "age": 28,
+    "marketValue": 300,
+    "goalCount": 0,
+    "dice": {
+      "dice": [
+        0,
+        1,
+        2,
+        0,
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "athlete": "Professional",
+    "name": "Nicolas",
+    "lastName": "Gonzalez",
+    "age": 24,
+    "marketValue": 300,
+    "goalCount": 0,
+    "dice": {
+      "dice": [
+        0,
+        1,
+        2,
+        0,
+        1,
+        2
+      ]
+    }
   }
 ]

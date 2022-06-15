@@ -1,5 +1,6 @@
 package Athlete;
 
+import Club.Stadium;
 import com.google.gson.*;
 
 import java.lang.reflect.Type;
@@ -20,6 +21,7 @@ public class AthleteDeserializer implements JsonDeserializer {
     public void registerBarnType(String athleteTypeName, Class<? extends Athlete> athleteType) {
         athleteTypeRegistry.put(athleteTypeName, athleteType);
     }
+
 
     @Override
     public Athlete deserialize(JsonElement json, Type typeOft, JsonDeserializationContext jsonDeserializationContext) throws JsonParseException {

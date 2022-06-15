@@ -16,6 +16,9 @@ public final class StarAthlete extends Athlete implements JsonHandler {
 
     //region Constructor
 
+    public StarAthlete() {
+    }
+
     public StarAthlete(String name, String lastName, int age) {
         super(name, lastName, age, 500, new Dice(0,1,2,3,0,1));
 
@@ -55,7 +58,7 @@ public final class StarAthlete extends Athlete implements JsonHandler {
     }
     //endregion
     //region Methods
-
+            //Arroja dados y setea atributos de atleta
     @Override
     public int throwDices (){
         int diceSide = super.getDice().RandomSide();
@@ -66,10 +69,6 @@ public final class StarAthlete extends Athlete implements JsonHandler {
         }
         return diceSide;
     }
-
-    //endregion
-
-    //regionMethods
 
     @Override
     public void save(List<Object> starAthletes, String fileName) {
@@ -120,4 +119,3 @@ public final class StarAthlete extends Athlete implements JsonHandler {
 
     //endregion
 }
-//agregar 2 futbolistas mas

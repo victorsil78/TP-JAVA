@@ -63,12 +63,12 @@
     ],
     "stadium": {
       "name": "River",
-      "capacidad": 15000,
-      "valorEntrada": 10,
-      "nivel": 1,
-      "costoProxNivel": 1500000
+      "capacity": 15000,
+      "ticketValue": 0.025,
+      "level": 1,
+      "upgradeCost": 1000
     },
-    "finances": 1500
+    "finances": 0
   },
   {
     "name": "Boca",
@@ -134,12 +134,12 @@
     ],
     "stadium": {
       "name": "Bombonera",
-      "capacidad": 15000,
-      "valorEntrada": 10,
-      "nivel": 1,
-      "costoProxNivel": 1500000
+      "capacity": 15000,
+      "ticketValue": 0.025,
+      "level": 1,
+      "upgradeCost": 1000
     },
-    "finances": 1500
+    "finances": 0
   },
   {
     "name": "Independiente",
@@ -205,12 +205,12 @@
     ],
     "stadium": {
       "name": "Independiente",
-      "capacidad": 15000,
-      "valorEntrada": 10,
-      "nivel": 1,
-      "costoProxNivel": 1500000
+      "capacity": 15000,
+      "ticketValue": 0.025,
+      "level": 1,
+      "upgradeCost": 1000
     },
-    "finances": 1500
+    "finances": 0
   },
   {
     "name": "Racing",
@@ -276,12 +276,12 @@
     ],
     "stadium": {
       "name": "Racing",
-      "capacidad": 15000,
-      "valorEntrada": 10,
-      "nivel": 1,
-      "costoProxNivel": 1500000
+      "capacity": 15000,
+      "ticketValue": 0.025,
+      "level": 1,
+      "upgradeCost": 1000
     },
-    "finances": 1500
+    "finances": 0
   },
   {
     "name": "Velez",
@@ -347,12 +347,12 @@
     ],
     "stadium": {
       "name": "Velez",
-      "capacidad": 15000,
-      "valorEntrada": 10,
-      "nivel": 1,
-      "costoProxNivel": 1500000
+      "capacity": 15000,
+      "ticketValue": 0.025,
+      "level": 1,
+      "upgradeCost": 1000
     },
-    "finances": 1500
+    "finances": 0
   },
   {
     "name": "San Lorenzo",
@@ -418,12 +418,12 @@
     ],
     "stadium": {
       "name": "San Lorenzo",
-      "capacidad": 15000,
-      "valorEntrada": 10,
-      "nivel": 1,
-      "costoProxNivel": 1500000
+      "capacity": 15000,
+      "ticketValue": 0.025,
+      "level": 1,
+      "upgradeCost": 1000
     },
-    "finances": 1500
+    "finances": 0
   },
   {
     "name": "Colon",
@@ -489,12 +489,12 @@
     ],
     "stadium": {
       "name": "Colon",
-      "capacidad": 15000,
-      "valorEntrada": 10,
-      "nivel": 1,
-      "costoProxNivel": 1500000
+      "capacity": 15000,
+      "ticketValue": 0.025,
+      "level": 1,
+      "upgradeCost": 1000
     },
-    "finances": 1500
+    "finances": 0
   },
   {
     "name": "Rosario Central",
@@ -560,12 +560,12 @@
     ],
     "stadium": {
       "name": "Rosario Central",
-      "capacidad": 15000,
-      "valorEntrada": 10,
-      "nivel": 1,
-      "costoProxNivel": 1500000
+      "capacity": 15000,
+      "ticketValue": 0.025,
+      "level": 1,
+      "upgradeCost": 1000
     },
-    "finances": 1500
+    "finances": 0
   },
   {
     "name": "Talleres",
@@ -631,12 +631,12 @@
     ],
     "stadium": {
       "name": "Talleres",
-      "capacidad": 15000,
-      "valorEntrada": 10,
-      "nivel": 1,
-      "costoProxNivel": 1500000
+      "capacity": 15000,
+      "ticketValue": 0.025,
+      "level": 1,
+      "upgradeCost": 1000
     },
-    "finances": 1500
+    "finances": 0
   },
   {
     "name": "Estudiantes",
@@ -702,11 +702,11 @@
     ],
     "stadium": {
       "name": "Estudiantes",
-      "capacidad": 15000,
-      "valorEntrada": 10,
-      "nivel": 1,
-      "costoProxNivel": 1500000
+      "capacity": 15000,
+      "ticketValue": 0.025,
+      "level": 1,
+      "upgradeCost": 1000
     },
-    "finances": 1500
+    "finances": 0
   }
 ]

@@ -1,0 +1,682 @@
+[
+  {
+    "name": "River",
+    "score": 0,
+    "team": [
+      {
+        "athlete": "Amateur",
+        "name": "Nicolas",
+        "lastName": "de la Cruz",
+        "age": 23,
+        "marketValue": 100,
+        "goalCount": 0,
+        "dice": {
+          "dice": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "athlete": "Amateur",
+        "name": "Brian",
+        "lastName": "Romero",
+        "age": 25,
+        "marketValue": 100,
+        "goalCount": 0,
+        "dice": {
+          "dice": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "athlete": "Amateur",
+        "name": "Julian",
+        "lastName": "Alvarez",
+        "age": 24,
+        "marketValue": 100,
+        "goalCount": 0,
+        "dice": {
+          "dice": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1
+          ]
+        }
+      }
+    ],
+    "stadium": {
+      "name": "Antonio Vespucio Liberti",
+      "capacity": 15000,
+      "ticketValue": 0.025,
+      "level": 1,
+      "upgradeCost": 1000
+    },
+    "finances": 0
+  },
+  {
+    "name": "Boca",
+    "score": 0,
+    "team": [
+      {
+        "athlete": "Amateur",
+        "name": "Sebastian",
+        "lastName": "Villa",
+        "age": 26,
+        "marketValue": 100,
+        "goalCount": 0,
+        "dice": {
+          "dice": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "athlete": "Amateur",
+        "name": "Alan",
+        "lastName": "Varela",
+        "age": 25,
+        "marketValue": 100,
+        "goalCount": 0,
+        "dice": {
+          "dice": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "athlete": "Amateur",
+        "name": "Dario",
+        "lastName": "Benedetto",
+        "age": 29,
+        "marketValue": 100,
+        "goalCount": 0,
+        "dice": {
+          "dice": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1
+          ]
+        }
+      }
+    ],
+    "stadium": {
+      "name": "Alberto J Armando",
+      "capacity": 15000,
+      "ticketValue": 0.025,
+      "level": 1,
+      "upgradeCost": 1000
+    },
+    "finances": 0
+  },
+  {
+    "name": "Independiente",
+    "score": 0,
+    "team": [
+      {
+        "athlete": "Amateur",
+        "name": "David",
+        "lastName": "Sayago",
+        "age": 31,
+        "marketValue": 100,
+        "goalCount": 0,
+        "dice": {
+          "dice": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "athlete": "Amateur",
+        "name": "Rodrigo",
+        "lastName": "Marquez",
+        "age": 25,
+        "marketValue": 100,
+        "goalCount": 0,
+        "dice": {
+          "dice": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "athlete": "Amateur",
+        "name": "Leandro",
+        "lastName": "Benegas",
+        "age": 34,
+        "marketValue": 100,
+        "goalCount": 0,
+        "dice": {
+          "dice": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1
+          ]
+        }
+      }
+    ],
+    "stadium": {
+      "name": "Libertadores de America",
+      "capacity": 15000,
+      "ticketValue": 0.025,
+      "level": 1,
+      "upgradeCost": 1000
+    },
+    "finances": 0
+  },
+  {
+    "name": "Racing",
+    "score": 0,
+    "team": [
+      {
+        "athlete": "Amateur",
+        "name": "Gabriel",
+        "lastName": "Hauche",
+        "age": 27,
+        "marketValue": 100,
+        "goalCount": 0,
+        "dice": {
+          "dice": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "athlete": "Amateur",
+        "name": "Enzo",
+        "lastName": "Copetti",
+        "age": 21,
+        "marketValue": 100,
+        "goalCount": 0,
+        "dice": {
+          "dice": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "athlete": "Amateur",
+        "name": "Marcelo",
+        "lastName": "Correa",
+        "age": 32,
+        "marketValue": 100,
+        "goalCount": 0,
+        "dice": {
+          "dice": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1
+          ]
+        }
+      }
+    ],
+    "stadium": {
+      "name": "Presidente Peron",
+      "capacity": 15000,
+      "ticketValue": 0.025,
+      "level": 1,
+      "upgradeCost": 1000
+    },
+    "finances": 0
+  },
+  {
+    "name": "Velez",
+    "score": 0,
+    "team": [
+      {
+        "athlete": "Amateur",
+        "name": "Lucas",
+        "lastName": "Pratto",
+        "age": 25,
+        "marketValue": 100,
+        "goalCount": 0,
+        "dice": {
+          "dice": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "athlete": "Amateur",
+        "name": "Luca",
+        "lastName": "Orellano",
+        "age": 28,
+        "marketValue": 100,
+        "goalCount": 0,
+        "dice": {
+          "dice": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "athlete": "Amateur",
+        "name": "Sebastian",
+        "lastName": "Sosa",
+        "age": 24,
+        "marketValue": 100,
+        "goalCount": 0,
+        "dice": {
+          "dice": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1
+          ]
+        }
+      }
+    ],
+    "stadium": {
+      "name": "Jose Amalfitani",
+      "capacity": 15000,
+      "ticketValue": 0.025,
+      "level": 1,
+      "upgradeCost": 1000
+    },
+    "finances": 0
+  },
+  {
+    "name": "San Lorenzo",
+    "score": 0,
+    "team": [
+      {
+        "athlete": "Amateur",
+        "name": "Eduardo",
+        "lastName": "Garcia",
+        "age": 21,
+        "marketValue": 100,
+        "goalCount": 0,
+        "dice": {
+          "dice": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "athlete": "Amateur",
+        "name": "Cristian",
+        "lastName": "Barrios",
+        "age": 20,
+        "marketValue": 100,
+        "goalCount": 0,
+        "dice": {
+          "dice": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "athlete": "Amateur",
+        "name": "Nicolas",
+        "lastName": "Blandi",
+        "age": 19,
+        "marketValue": 100,
+        "goalCount": 0,
+        "dice": {
+          "dice": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1
+          ]
+        }
+      }
+    ],
+    "stadium": {
+      "name": "Pedro Bidegain",
+      "capacity": 15000,
+      "ticketValue": 0.025,
+      "level": 1,
+      "upgradeCost": 1000
+    },
+    "finances": 0
+  },
+  {
+    "name": "Colon",
+    "score": 0,
+    "team": [
+      {
+        "athlete": "Amateur",
+        "name": "Jesus",
+        "lastName": "Olmedo",
+        "age": 31,
+        "marketValue": 100,
+        "goalCount": 0,
+        "dice": {
+          "dice": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "athlete": "Amateur",
+        "name": "Danilo",
+        "lastName": "Gomez",
+        "age": 22,
+        "marketValue": 100,
+        "goalCount": 0,
+        "dice": {
+          "dice": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "athlete": "Amateur",
+        "name": "Lucas",
+        "lastName": "Beltran",
+        "age": 19,
+        "marketValue": 100,
+        "goalCount": 0,
+        "dice": {
+          "dice": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1
+          ]
+        }
+      }
+    ],
+    "stadium": {
+      "name": "Brigadier Gral Estanislao Lopez",
+      "capacity": 15000,
+      "ticketValue": 0.025,
+      "level": 1,
+      "upgradeCost": 1000
+    },
+    "finances": 0
+  },
+  {
+    "name": "Rosario Central",
+    "score": 0,
+    "team": [
+      {
+        "athlete": "Amateur",
+        "name": "Marco",
+        "lastName": "Ruben",
+        "age": 29,
+        "marketValue": 100,
+        "goalCount": 0,
+        "dice": {
+          "dice": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "athlete": "Amateur",
+        "name": "Lucas",
+        "lastName": "Gamba",
+        "age": 30,
+        "marketValue": 100,
+        "goalCount": 0,
+        "dice": {
+          "dice": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "athlete": "Amateur",
+        "name": "Milton",
+        "lastName": "Caraglio",
+        "age": 27,
+        "marketValue": 100,
+        "goalCount": 0,
+        "dice": {
+          "dice": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1
+          ]
+        }
+      }
+    ],
+    "stadium": {
+      "name": "Gigante de arroyito",
+      "capacity": 15000,
+      "ticketValue": 0.025,
+      "level": 1,
+      "upgradeCost": 1000
+    },
+    "finances": 0
+  },
+  {
+    "name": "Talleres",
+    "score": 0,
+    "team": [
+      {
+        "athlete": "Amateur",
+        "name": "Matias",
+        "lastName": "Godoy",
+        "age": 21,
+        "marketValue": 100,
+        "goalCount": 0,
+        "dice": {
+          "dice": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "athlete": "Amateur",
+        "name": "Federico",
+        "lastName": "Girotti",
+        "age": 29,
+        "marketValue": 100,
+        "goalCount": 0,
+        "dice": {
+          "dice": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "athlete": "Amateur",
+        "name": "Emerson",
+        "lastName": "Batalla",
+        "age": 33,
+        "marketValue": 100,
+        "goalCount": 0,
+        "dice": {
+          "dice": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1
+          ]
+        }
+      }
+    ],
+    "stadium": {
+      "name": "Mario Alberto Kempes",
+      "capacity": 15000,
+      "ticketValue": 0.025,
+      "level": 1,
+      "upgradeCost": 1000
+    },
+    "finances": 0
+  },
+  {
+    "name": "Estudiantes",
+    "score": 0,
+    "team": [
+      {
+        "athlete": "Amateur",
+        "name": "Mauro",
+        "lastName": "Boselli",
+        "age": 24,
+        "marketValue": 100,
+        "goalCount": 0,
+        "dice": {
+          "dice": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "athlete": "Amateur",
+        "name": "Alan",
+        "lastName": "Marinelli",
+        "age": 30,
+        "marketValue": 100,
+        "goalCount": 0,
+        "dice": {
+          "dice": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "athlete": "Amateur",
+        "name": "Blas",
+        "lastName": "Palavecino",
+        "age": 29,
+        "marketValue": 100,
+        "goalCount": 0,
+        "dice": {
+          "dice": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1
+          ]
+        }
+      }
+    ],
+    "stadium": {
+      "name": "Uno Jorge Luis Hirschi",
+      "capacity": 15000,
+      "ticketValue": 0.025,
+      "level": 1,
+      "upgradeCost": 1000
+    },
+    "finances": 0
+  }
+]

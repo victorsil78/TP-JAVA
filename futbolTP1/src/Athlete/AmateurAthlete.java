@@ -45,7 +45,6 @@ public final class AmateurAthlete extends Athlete implements JsonHandler {
     //endregion
 
     //region Methods
-
     @Override
     public void save(List<Object> amateurs, String fileName) {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
@@ -66,7 +65,7 @@ public final class AmateurAthlete extends Athlete implements JsonHandler {
             }
         }
 
-    }
+    }//graba en Json
 
     @Override
     public void jsonToList(List<Object> amateurs, String fileName){
@@ -91,6 +90,6 @@ public final class AmateurAthlete extends Athlete implements JsonHandler {
                 e.printStackTrace();
             }
         }
-    }
+    }//Lee Json
     //endregion
 }

@@ -7,22 +7,20 @@ import java.util.List;
 public class GamePlayer {
     private String name;
     private Club club;
-    private int wins;
 
     //region Constructors
 
-    public GamePlayer(String name, Club club, int wins) {
+    public GamePlayer(String name, Club club) {
         this.name = name;
         this.club = club;
-        this.wins = wins;
     }
 
     public GamePlayer(List<Club> clubList) {
-                this.name = "PC";
-                this.club = randomClub(clubList);
-            }
+        this.name = "PC";
+        this.club = randomClub(clubList);
+    }
 
-            //endregion
+    //endregion
     //region Getters
 
     public String getName() {
@@ -33,9 +31,6 @@ public class GamePlayer {
         return club;
     }
 
-    public int getWins() {
-        return wins;
-    }
 
     //endregion
     //region Setters
@@ -48,9 +43,6 @@ public class GamePlayer {
         this.club = club;
     }
 
-    public void setWins(int wins) {
-        this.wins = wins;
-    }
 
     //endregion
     //region ToString
@@ -59,28 +51,37 @@ public class GamePlayer {
     public String toString() {
         return "GamePlayer{" +
                 "name='" + name + '\'' + "\n" +
-                ", club=" + club + "\n" +
-                ", wins=" + wins + "\n" +
+                ", club=" + club.getName() + "\n" +
                 '}' + "\n";
     }
 
     //endregion
     //region Methods
-    public int clubCounter(List<Club> clubList){
+            //Cuenta la cantidad de clubes de una lista
+    public int clubCounter(List<Club> clubList) {
         int total = 0;
-        for (var i : clubList){
-            total ++;
+        for (var i : clubList) {
+            total++;
         }
         return total;
     }
-
-    public Club randomClub (List<Club> clubList){
+            //Toma una lista, cuenta la cantidad de clubes y devuelve uno random
+    public Club randomClub(List<Club> clubList) {
         int total = clubCounter(clubList);
-        int random = (int)(Math.random()*total);
+        int random = (int) (Math.random() * total);
         Club club = clubList.get(random);
         clubList.remove(club);
         return club;
     }
+            //Llama al turno del jugador del equipo y "muestra resultados"
+    public int play(int index) {
+        return club.playerTurn(club.getTeam().get(index));
+    }
+            //Llama al "arrojar dados" de la clase Athlete "sin mostrar resultados"
+    public int randomPlay(int index) {
+        return club.getTeam().get(index).throwDices();
+    }
+
     //endregion
 
 }

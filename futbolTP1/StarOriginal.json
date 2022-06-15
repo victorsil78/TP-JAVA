@@ -2,10 +2,11 @@
   {
     "athlete": "Star",
     "hattrickCount": 0,
-    "name": "Robert",
-    "lastName": "Lewandowski",
-    "age": 31,
+    "name": "Lionel",
+    "lastName": "Messi",
+    "age": 32,
     "marketValue": 500,
+    "goalCount": 0,
     "dice": {
       "dice": [
         0,
@@ -15,9 +16,45 @@
         0,
         1
       ]
-    },
+    }
+  },
+  {
+    "athlete": "Star",
+    "hattrickCount": 0,
+    "name": "Cristiano",
+    "lastName": "Ronaldo",
+    "age": 33,
+    "marketValue": 500,
     "goalCount": 0,
-    "hatTrick": 0
+    "dice": {
+      "dice": [
+        0,
+        1,
+        2,
+        3,
+        0,
+        1
+      ]
+    }
+  },
+  {
+    "athlete": "Star",
+    "hattrickCount": 0,
+    "name": "Robert",
+    "lastName": "Lewandowski",
+    "age": 31,
+    "marketValue": 500,
+    "goalCount": 0,
+    "dice": {
+      "dice": [
+        0,
+        1,
+        2,
+        3,
+        0,
+        1
+      ]
+    }
   },
   {
     "athlete": "Star",
@@ -26,6 +63,7 @@
     "lastName": "Salah",
     "age": 29,
     "marketValue": 500,
+    "goalCount": 0,
     "dice": {
       "dice": [
         0,
@@ -35,9 +73,7 @@
         0,
         1
       ]
-    },
-    "goalCount": 0,
-    "hatTrick": 0
+    }
   },
   {
     "athlete": "Star",
@@ -46,6 +82,7 @@
     "lastName": "Mbappe",
     "age": 27,
     "marketValue": 500,
+    "goalCount": 0,
     "dice": {
       "dice": [
         0,
@@ -55,9 +92,7 @@
         0,
         1
       ]
-    },
-    "goalCount": 0,
-    "hatTrick": 0
+    }
   },
   {
     "athlete": "Star",
@@ -66,6 +101,7 @@
     "lastName": "Haaland",
     "age": 32,
     "marketValue": 500,
+    "goalCount": 0,
     "dice": {
       "dice": [
         0,
@@ -75,9 +111,7 @@
         0,
         1
       ]
-    },
-    "goalCount": 0,
-    "hatTrick": 0
+    }
   },
   {
     "athlete": "Star",
@@ -86,6 +120,7 @@
     "lastName": "Benzema",
     "age": 31,
     "marketValue": 500,
+    "goalCount": 0,
     "dice": {
       "dice": [
         0,
@@ -95,9 +130,7 @@
         0,
         1
       ]
-    },
-    "goalCount": 0,
-    "hatTrick": 0
+    }
   },
   {
     "athlete": "Star",
@@ -106,6 +139,7 @@
     "lastName": "Suarez",
     "age": 33,
     "marketValue": 500,
+    "goalCount": 0,
     "dice": {
       "dice": [
         0,
@@ -115,9 +149,7 @@
         0,
         1
       ]
-    },
-    "goalCount": 0,
-    "hatTrick": 0
+    }
   },
   {
     "athlete": "Star",
@@ -126,6 +158,7 @@
     "lastName": "Lukaku",
     "age": 30,
     "marketValue": 500,
+    "goalCount": 0,
     "dice": {
       "dice": [
         0,
@@ -135,9 +168,7 @@
         0,
         1
       ]
-    },
-    "goalCount": 0,
-    "hatTrick": 0
+    }
   },
   {
     "athlete": "Star",
@@ -146,6 +177,7 @@
     "lastName": "Pogba",
     "age": 26,
     "marketValue": 500,
+    "goalCount": 0,
     "dice": {
       "dice": [
         0,
@@ -155,8 +187,44 @@
         0,
         1
       ]
-    },
+    }
+  },
+  {
+    "athlete": "Star",
+    "hattrickCount": 0,
+    "name": "Diego",
+    "lastName": "Maradona",
+    "age": 60,
+    "marketValue": 500,
     "goalCount": 0,
-    "hatTrick": 0
+    "dice": {
+      "dice": [
+        0,
+        1,
+        2,
+        3,
+        0,
+        1
+      ]
+    }
+  },
+  {
+    "athlete": "Star",
+    "hattrickCount": 0,
+    "name": "Claudio",
+    "lastName": "Caniggia",
+    "age": 50,
+    "marketValue": 500,
+    "goalCount": 0,
+    "dice": {
+      "dice": [
+        0,
+        1,
+        2,
+        3,
+        0,
+        1
+      ]
+    }
   }
 ]

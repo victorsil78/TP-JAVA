@@ -81,11 +81,11 @@ public class Stadium {
 
     //endregion
     //region Methods
-
+            //Devuelve monto de tickets*capacidad
     public double ticketsIncome(){
         return this.capacity*this.ticketValue;
     }
-
+            //Setea atributos del estadio
     public boolean stadiumUpgrade(){
         if(level < 3){
             setLevel(getLevel() + 1);
