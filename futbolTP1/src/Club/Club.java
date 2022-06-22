@@ -175,14 +175,15 @@ public class Club implements JsonHandler {
         setFinances(getFinances() + (int)getStadium().ticketsIncome());
     }
 
+    //Guarda una lista cargada a un json.
     @Override
     public void save(List<Object> clubsToJson, String fileName) {
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        Gson gson = new GsonBuilder().setPrettyPrinting().create(); // Se crea una instancia de Gson customizada con GsonBuilder. SetPretty, mejora el formato para que sea visualmente mas agradable
         BufferedWriter writer = null;
         try{
-            writer = new BufferedWriter(new FileWriter(new File(fileName)));
-            String json = gson.toJson(clubsToJson, clubsToJson.getClass());
-            writer.write(json);
+            writer = new BufferedWriter(new FileWriter(new File(fileName))); // Se carga el buffer de escritura con un FileWriter, de nombre pasado por parametro.
+            String json = gson.toJson(clubsToJson, clubsToJson.getClass()); // ToJson serializa la lista recibida y la devuelve como string.
+            writer.write(json);//Se escribe el string json en el archivo.
         }catch (IOException e){
             e.printStackTrace();
         } finally {
@@ -197,20 +198,21 @@ public class Club implements JsonHandler {
 
     }
 
+    // Se pasan datos del json a una lista vacia
     @Override
     public void jsonToList(List<Object> clubsToList, String fileName){
-        AthleteDeserializer deserializer = new AthleteDeserializer("athlete");
-        deserializer.registerBarnType("AmateurAthlete", AmateurAthlete.class);
+        AthleteDeserializer deserializer = new AthleteDeserializer("athlete"); // crea instancia de deserializador
+        deserializer.registerBarnType("AmateurAthlete", AmateurAthlete.class); // Se agregan al mapa las posibles clases del json
         deserializer.registerBarnType("Athlete", Athlete.class);
         deserializer.registerBarnType("ProAthlete", ProAthlete.class);
         deserializer.registerBarnType("StarAthlete", StarAthlete.class);
-        Gson gson = new GsonBuilder().registerTypeAdapter(Athlete.class, deserializer).create();
+        Gson gson = new GsonBuilder().registerTypeAdapter(Athlete.class, deserializer).create(); // crea instancia de gson con el tipo de adapatador deserializador que creamos
         BufferedReader reader = null;
         List<Club> clubList;
         try{
-            reader = new BufferedReader(new FileReader(new File(fileName)));
-            clubList = gson.fromJson(reader, (new TypeToken<List<Club>>(){}.getType()));
-            clubsToList.addAll(clubList);
+            reader = new BufferedReader(new FileReader(new File(fileName))); // carga buffer de lectura con archivo
+            clubList = gson.fromJson(reader, (new TypeToken<List<Club>>(){}.getType())); // fromJson recibe el archivo y la clase en la que deserializara, Y lo retorna a la lista.
+            clubsToList.addAll(clubList); //Se agrega la lista cargada a la lista vacia recibida por parametro.
         }catch (IOException e){
             e.printStackTrace();
         }finally {

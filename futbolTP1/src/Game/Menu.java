@@ -6,6 +6,7 @@ import Athlete.ProAthlete;
 import Athlete.StarAthlete;
 import Club.Club;
 import Club.Stadium;
+import jdk.swing.interop.SwingInterOpUtils;
 
 import java.io.IOException;
 import java.util.*;
@@ -83,14 +84,41 @@ public class Menu {
             int result2 = playerMenu(i.getPlayer2());
             if (result != 0 && result2 != 0) {
                 i.playMatch(getTournament().getStatistics(), clubs);
+                getTournament().setCounter(tournament.getCounter() + 1);
             } else {
                 System.out.println("See you soon");
                 answer = false;
+                List<Object> tournaments = new ArrayList<>();
+                tournaments.add(tournament);
+                tournament.save(tournaments, "ContinueGame.json");
                 break;
             }
         }
         return answer;
     }
+
+    public boolean continueGame() {
+        boolean answer = true;
+        int totalMatches = getTournament().getMatches().size();
+        int index = tournament.getCounter();
+        for ( int i = index ;  i < totalMatches ; i++) {
+            int result = playerMenu(tournament.getMatches().get(i).getPlayer1());
+            int result2 = playerMenu(tournament.getMatches().get(i).getPlayer2());
+            System.out.println("result: " + result + "\nresult 2: "+ result2);
+            if (result != 0 && result2 != 0) {
+                tournament.getMatches().get(i).playMatch(getTournament().getStatistics(), clubs);
+            } else {
+                System.out.println("See you soon");
+                answer = false;
+                List<Object> tournaments = new ArrayList<>();
+                tournaments.add(tournament);
+                tournament.save(tournaments, "ContinueGame.json");
+                break;
+            }
+        }
+        return answer;
+    }
+
             //Muestra estadisticas finales del torneo
     public void tournamentFinalStatistics() {
         System.out.println("-----------------------------------");
@@ -132,6 +160,7 @@ public class Menu {
         do {
             System.out.println("\n\nWelcome to UTNSoccer\n");
             System.out.println("1 - Start");
+            System.out.println("2 - Continue Game");
             System.out.println("0 - Exit game");
             try {
                 answer = scanner.nextInt();
@@ -148,6 +177,26 @@ public class Menu {
                             newTournamentMenu();
                         } else {
                             answer = 0;
+                        }
+                        break;
+                    case 2:
+                        List<Object> tournamentsContinue = new ArrayList<>();
+                        tournament.jsonToList(tournamentsContinue, "ContinueGame.json");
+                        List<Tournament> tournamentList = new ArrayList<>();
+                        try{
+                            for(var i : tournamentsContinue){
+                                tournamentList.add((Tournament) i);
+                            }
+                            tournament = tournamentList.get(0);
+                            boolean resp2 = continueGame();
+                            if (resp2) {
+                                tournamentFinalStatistics();
+                                newTournamentMenu();
+                            } else {
+                                answer = 0;
+                            }
+                        }catch (IndexOutOfBoundsException e){
+                            System.out.println("You don't have any game to continue");
                         }
                         break;
                     default:
@@ -263,7 +312,7 @@ public class Menu {
             //Menu q contiene todas las opciones de cada Usuario, antes de comenzar el partido
     public int playerMenu(GamePlayer player) {
         int answer = -1;
-        if (player.getName() == "PC") {
+        if (player.getName().equalsIgnoreCase("PC")) {
             answer = 1;
         } else {
             do {
